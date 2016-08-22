@@ -1,0 +1,42 @@
+subprojects {
+	apply plugin: 'java'
+	apply plugin: 'eclipse'
+
+	sourceCompatibility = 1.8
+	targetCompatibility = 1.8
+	
+	repositories {
+		maven {
+			url "http://mvn.pajk-ent.com/nexus/content/groups/public"
+		}
+		mavenCentral()
+	}
+	
+	eclipse {
+		classpath {
+			 downloadSources=true
+			 containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
+			// containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8'
+		}
+	}
+	
+	dependencies {
+	//	compile project(":shangrao-redis")
+	//	compile('org.springframework.data:spring-data-redis:1.7.2.RELEASE')
+	//	compile('org.apache.commons:commons-pool2:2.4.2')
+	//	compile('redis.clients:jedis:2.9.0')
+	//	compile('org.springframework:spring-web:4.3.1.RELEASE')
+		
+	//	testCompile('org.springframework.boot:spring-boot-starter-test:1.4.0.RELEASE')
+		
+	}
+	
+	configurations.all {
+		resolutionStrategy.eachDependency 
+		{ DependencyResolveDetails details ->
+			if (details.requested.group == 'org.springframework') {
+				details.useVersion '4.3.1.RELEASE'
+			}	
+		}
+	}
+}

@@ -1,0 +1,12 @@
+<!DOCTYPE html>  
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">  
+    <head>
+        <title>Hello world</title>
+    </head>
+    <body>
+        <p>Hello <span th:text="${#httpServletRequest.remoteUser}">new user</span></p>
+        <form th:action="@{/logout}" method="post">
+        	<input type="submit" value="注销"/>
+        </form>
+    </body>
+</html>
