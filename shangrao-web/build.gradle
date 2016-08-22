@@ -30,6 +30,8 @@ targetCompatibility = 1.8
 
 
 dependencies {
+	compile project(":shangrao-entity")
+
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.security:spring-security-web:4.1.1.RELEASE')
 	compile('org.springframework.security:spring-security-config:4.1.1.RELEASE')

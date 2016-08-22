@@ -1,5 +1,8 @@
 package com.fourfire.mapper;
 
-public interface UserMapper {
+import com.fourfire.entity.User;
 
+public interface UserMapper {
+	User selectById(long id);
+	User selectByUsername(String username);
 }

@@ -2,6 +2,8 @@
 *.classpath
 *.project
 */.project
+.gradle/*
+
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
@@ -17,3 +19,5 @@ hs_err_pid*
 
 */target/*
 */.settings/*
+*/bin/*
+shangrao-web/bin/.gitignore

@@ -1,1 +1,2 @@
 include 'shangrao-web'
+include 'shangrao-entity'
