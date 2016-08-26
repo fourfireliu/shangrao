@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ThemeleafTestApplication {
 
 	public static void main(String[] args) {
-		System.out.println(args.length);
+	//	System.out.println(args.length);
 		SpringApplication.run(ThemeleafTestApplication.class, args);
 //		SpringApplication application = new SpringApplication(ThemeleafTestApplication.class);
 //		application.run(args);
